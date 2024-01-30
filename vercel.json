@@ -1,0 +1,6 @@
+{
+    "routes": [
+      { "src": "/api/fakeApi", "dest": "/api/fakeApi.js" },
+      { "src": "/(.*)", "dest": "/" }
+    ]
+  }
