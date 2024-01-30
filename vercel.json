@@ -1,19 +1,22 @@
 {
-    "functions": {
-      "server.js": {
-        "memory": 1024,
-        "includeFiles": "data/cities.json"
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["data/cities.json"]
       }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
     },
-    "rewrites": [
-      {
-        "source": "^/api/(.*)",
-        "destination": "/server.js"
-      },
-      {
-        "source": "^/([^/]+)?",
-        "destination": "/index.html"
-      }
-    ]
-  }
-  
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
