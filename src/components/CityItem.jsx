@@ -11,7 +11,6 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 function CityItem({ cities }) {
-  console.log("hellow world animesh singh how are you ");
   const { currentCities, deleteCity, loading } = useCity();
   const { cityName, emoji, date, id, position } = cities;
   function removeCityHandler(e) {

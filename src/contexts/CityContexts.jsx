@@ -59,7 +59,6 @@ function CityProvider({ children }) {
         dispatch({ type: "cities/loading", payload: data });
       } catch (err) {
         dispatch({ type: "error", payload: err.message });
-        console.log(err.message);
       }
     }
     fetchCities();
@@ -73,7 +72,6 @@ function CityProvider({ children }) {
       dispatch({ type: "city/loading", payload: data });
     } catch (err) {
       dispatch({ type: "error", payload: err.message });
-      console.log(err.message);
     }
   }, []);
 
@@ -91,7 +89,6 @@ function CityProvider({ children }) {
       dispatch({ type: "city/create", payload: data });
     } catch (err) {
       dispatch({ type: "error", payload: err.message });
-      console.log(err.message);
     }
   }
 
@@ -104,7 +101,6 @@ function CityProvider({ children }) {
       dispatch({ type: "city/delete", payload: id });
     } catch (err) {
       dispatch({ type: "error", payload: err.message });
-      console.log(err.message);
     }
   }
 
