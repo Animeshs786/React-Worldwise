@@ -7,7 +7,7 @@ import {
 } from "react";
 
 const CityContext = createContext();
-const BASE_URL = "http://localhost:9000";
+const BASE_URL = "https://json-api-vercel.vercel.app";
 
 function reducer(state, action) {
   switch (action.type) {
